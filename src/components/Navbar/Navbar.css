@@ -1,0 +1,17 @@
+.fon{
+    padding: 15px !important;
+    border-radius: 20px;
+}
+
+.search{
+    color: rgb(1, 77, 255) !important;
+    background-color: transparent;
+    border-color: rgb(1, 77, 255) !important;
+    transition: all 0.3s linear !important;
+}
+
+
+.search:hover{
+    color: white !important;
+    background-color: rgb(1, 77, 255) !important;
+}

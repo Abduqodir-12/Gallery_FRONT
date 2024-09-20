@@ -1,0 +1,38 @@
+.main-title{
+    padding-top: 100px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 28px;
+    width: 630px;
+}
+
+.second-title{
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.dote{
+    width: 7px;
+    margin-bottom: 13px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: rgb(1, 77, 255);
+}
+
+.images{
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.addImgForm {
+    max-width: 500px;
+    width: 100%;
+}

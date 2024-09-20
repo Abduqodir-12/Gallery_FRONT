@@ -1,0 +1,116 @@
+.photo{
+    position: relative;
+    margin-bottom: 10px;
+}
+.image{
+    width: 357px;
+    height: 300px;
+    object-fit: cover;
+}
+.photo-title{
+    position: absolute;
+    bottom: -8px;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    left: 5px;
+    color: white;
+    background-color: rgb(1, 77, 255);
+}
+
+.photo-delete{
+    position: absolute;
+    bottom: 8px;
+    font-size: 14px;
+    padding: 7px;
+    border-radius: 5px;
+    right: 5px;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+    transition: all 0.09s linear;
+}
+
+.photo-delete:active{
+   transform: scale(1.2);
+   background-color: whitesmoke;
+   color: red;
+   border: 1px solid red;
+}
+
+.photo-update{
+    position: absolute;
+    bottom: 40px;
+    font-size: 14px;
+    padding: 7px;
+    border-radius: 5px;
+    right: 4px;
+    color: white;
+    background-color:  rgb(46, 109, 255);
+    cursor: pointer;
+    transition: all 0.09s linear;
+}
+
+.photo-update:active{
+    transform: scale(1.2);
+    background-color: whitesmoke;
+    color:  rgb(46, 109, 255);
+    border: 1px solid  rgb(46, 109, 255);
+ }
+
+ .photo-download{
+    position: absolute;
+    bottom: 8px;
+    font-size: 14px;
+    padding: 7px;
+    border-radius: 5px;
+    right: 35px;
+    color: white;
+    background:  green;
+    cursor: pointer;
+    transition: all 0.09s linear;
+}
+
+.photo-download:active{
+    transform: scale(1.2);
+    background-color: whitesmoke;
+    color:  green;
+    border: 1px solid green;
+ }
+
+ .photo-open{
+    position: absolute;
+    bottom: 8px;
+    font-size: 14px;
+    padding: 7px;
+    border-radius: 5px;
+    right: 5px;
+    color: black;
+    background-color: lightgray;
+    cursor: pointer;
+    transition: all 0.09s linear;
+}
+
+.photo-open:active{
+    transform: scale(1.2);
+    background-color: lightgray;
+    color:   black;
+    border: 1px solid  rgb(46, 109, 255);
+ }
+
+ .photo-close{
+    position: absolute;
+    bottom: 40px;
+    font-size: 14px;
+    padding: 7px 8px;
+    border-radius: 5px;
+    right: 35px;
+    color: black;
+    background-color: lightgray;
+    cursor: pointer;
+    transition: all 0.09s linear;
+}
+
+.photo-close:active{
+    transform: scale(1.2);
+ }
