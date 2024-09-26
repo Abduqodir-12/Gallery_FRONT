@@ -5,7 +5,7 @@ import { signup, login } from '../../api/authRequests';
 import "./Auth.css";
 
 const Auth = () => {
-  const { setCurrentUser } = useInfoContext();
+  const { setCurrentUser } = useInfoContext();  
   const [isSignup, setIsSignup] = useState(false)
   const [loading, setLoading ] = useState(false)
   
@@ -27,7 +27,7 @@ const Auth = () => {
       toast.info(res.data.message)
       localStorage.setItem('account', JSON.stringify(res.data.user))
       localStorage.setItem('token', JSON.stringify(res.data.token))
-      setCurrentUser(res.data.user)
+      setCurrentUser(res?.data?.user)
       setLoading(false)
     } catch (error) {
       toast.dismiss()

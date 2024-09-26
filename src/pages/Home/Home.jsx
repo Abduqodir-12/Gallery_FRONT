@@ -5,10 +5,11 @@ import { addPhoto, getPhotos } from "../../api/photoRequests";
 import { toast } from "react-toastify";
 import Photo from "../../components/Photo/Photo";
 import { useInfoContext } from "../../context/Context";
+import Modal from "../../components/Modal/Modal";
 
 const Home = () => {
   const [photos, setPhotos] = useState([]);
-  const { currentUser, searchTerm } = useInfoContext();
+  const { currentUser, searchTerm, modal, setModalFoto } = useInfoContext();
 
   useEffect(() => {
     const getImages = async () => {
@@ -36,6 +37,7 @@ const Home = () => {
       toast.dismiss();
       toast.success(res?.data?.message);
       setPhotos([...photos, res?.data?.newPhoto]);
+      e.target.reset();
     } catch (error) {
       toast.dismiss();
       toast.error(error?.message);
@@ -73,6 +75,8 @@ const Home = () => {
           <h3>Images not found!</h3>
         )}
       </div>
+
+      {modal && <Modal/>}
     </div>
   );
 };

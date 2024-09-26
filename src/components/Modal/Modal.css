@@ -2,7 +2,7 @@
     width: 100%;
     min-height: 100vh;
     position: fixed;
-    z-index: 10000;
+    z-index: 10;
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.582);
@@ -10,7 +10,7 @@
 .modal-body{
     padding: 10px 15px;
     width: 500px;
-    margin: 90px auto; 
+    margin: 50px auto; 
     background-color: white;
     border-radius: 10px;
     border: 2px solid lightgray;

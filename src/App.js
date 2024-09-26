@@ -6,7 +6,8 @@ import Auth from './pages/Auth/Auth';
 import { useInfoContext } from './context/Context';
 
 function App() {
-  const {currentUser} = useInfoContext()  
+  const {currentUser} = useInfoContext() 
+   
 
   return (
     <div className="App">

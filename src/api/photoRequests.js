@@ -20,5 +20,5 @@ export const deletePhoto = (id) => {
 
 export const updatePhoto = (id, formData) => {
   const token = JSON.parse(localStorage.getItem('token'))
-  return API.put(`/img${id}`, formData, {headers: {token}})
+  return API.put(`/img/${id}`, formData, {headers: {token}})
 }
