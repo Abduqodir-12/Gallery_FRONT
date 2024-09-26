@@ -3,6 +3,8 @@ import { useInfoContext } from "../../context/Context";
 import { deletePhoto } from "../../api/photoRequests";
 import { toast } from "react-toastify";
 import { useState } from "react";
+import deleteBtnImg from '../../img/delete.233x256.png'
+import updateBtnImg from '../../img/update.png'
 
 const Photo = ({ photo, photos, setPhotos }) => {
   const { setModal, setPostId, setPhotoData, modalFoto, setModalFoto } = useInfoContext();  
@@ -45,13 +47,13 @@ const Photo = ({ photo, photos, setPhotos }) => {
   };
 
   return (
-    <div className="photo" onClick={() => setModalFoto(true)}>
-      <img className="image" src={photo?.image.url} alt="image" />
+    <div className="photo">
+      <img className="image" src={photo?.image.url} alt="image" onClick={() => setModalFoto(true)}/>
       <div className="flex-elements">
         <p>{photo?.title}</p>
+        <button className="deleteBtn" onClick={() => handleDelete(photo._id)}><img className="btnImg" src={deleteBtnImg} alt="deleteBtn"/></button>
+        <button className="updateBtn" onClick={handleUpdate}><img className="btnImg" src={updateBtnImg} alt="updateBtn"/></button>
       </div>
-      <button className="deleteBtn" onClick={() => handleDelete(photo._id)}>Delete</button>
-      <button className="updateBtn" onClick={handleUpdate}>Update</button>
 
       <div className={modalFoto ? 'caruselModal' : 'coruselDNone'}>
         <button className="closeBtn" onClick={() => setModalFoto(false)}>X</button>

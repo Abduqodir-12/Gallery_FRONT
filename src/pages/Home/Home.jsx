@@ -60,7 +60,7 @@ const Home = () => {
             <button className="btn btn-outline-primary d-block mx-auto">Save</button>
           </form>
         </div>
-        <div className="main-title ">Photos</div>
+        <div className="main-title">Photos</div>
       </div>
       <div className="images">
         {photos?.length > 0 ? (
