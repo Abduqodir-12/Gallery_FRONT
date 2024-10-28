@@ -14,6 +14,7 @@ const Home = () => {
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
   const [image, setImage] = useState("");
+  const titleRef = useRef(null);
 
   useEffect(() => {
     const getImages = async () => {
@@ -93,13 +94,14 @@ const Home = () => {
         const file = new File([blob], "capture.png", { type: "image/png" });
         const formData = new FormData();
         formData.append("photo", file);
-        formData.append("title", "Captured Image");
+        formData.append("title", titleRef.current.value);
 
         toast.loading("Uploading...");
         const res = await addPhoto(formData);
         toast.dismiss();
         toast.success(res?.data?.message);
         setPhotos([...photos, res?.data?.newPhoto]);
+        e.target.reset();
       } catch (error) {
         toast.dismiss();
         toast.error("Failed to upload captured image.");
@@ -124,10 +126,11 @@ const Home = () => {
               <div className="display">
                 <video ref={videoRef} autoPlay width="500px" height="350px" />
               </div>
-              <button onClick={captureImage}>Capture</button>
+              <button onClick={captureImage} className="captureBtn">Capture</button>
 
               <form onSubmit={handleSubmit}>
-                <button type="submit">Send</button>
+                <input ref={titleRef} type="text" name="title" className="form-control my-2" placeholder="Title..." required />
+                <button type="submit" className="btn btn-outline-primary d-block mx-auto">Send</button>
               </form>
 
               <canvas ref={canvasRef} width="500px" height="350px" style={{ display: "none"}}/>
