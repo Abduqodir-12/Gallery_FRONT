@@ -20,6 +20,10 @@
     width: 25px;
 }
 
+.logoIcon {
+    width: 50px;
+}
+
 @media(max-width: 992px) {
     .navLogo {
         text-align: center;
