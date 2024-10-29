@@ -81,7 +81,7 @@ const Home = () => {
     const canvas = canvasRef.current;
     const video = videoRef.current;
     const context = canvas.getContext("2d");
-    context.drawImage(video, 0, 0, 500, 280);
+    context.drawImage(video, 0, 0, 300, 180);
     const imgData = canvas.toDataURL("image/png");
     setImage(imgData);
   };
@@ -124,8 +124,8 @@ const Home = () => {
           ) : (
             <div>
               <div className="display">
-                <video ref={videoRef} autoPlay width={500} height={350}/>
-                <canvas ref={canvasRef} width={500} height={280}/>
+                <video ref={videoRef} autoPlay width={300}/>
+                <canvas ref={canvasRef} width={300} height={180}/>
               </div>
               <button onClick={captureImage} className="captureBtn">Capture</button>
 
