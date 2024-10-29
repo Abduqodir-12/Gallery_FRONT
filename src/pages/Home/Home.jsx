@@ -81,7 +81,7 @@ const Home = () => {
     const canvas = canvasRef.current;
     const video = videoRef.current;
     const context = canvas.getContext("2d");
-    context.drawImage(video, 0, 0, 500, 350);
+    context.drawImage(video, 0, 0, 500, 280);
     const imgData = canvas.toDataURL("image/png");
     setImage(imgData);
   };
@@ -124,7 +124,8 @@ const Home = () => {
           ) : (
             <div>
               <div className="display">
-                <video ref={videoRef} autoPlay width="500px" height="350px" />
+                <video ref={videoRef} autoPlay width={500} height={350}/>
+                <canvas ref={canvasRef} width={500} height={280}/>
               </div>
               <button onClick={captureImage} className="captureBtn">Capture</button>
 
@@ -133,7 +134,6 @@ const Home = () => {
                 <button type="submit" className="btn btn-outline-primary d-block mx-auto">Send</button>
               </form>
 
-              <canvas ref={canvasRef} width="500px" height="350px" style={{ display: "none"}}/>
             </div>
           )}
         </div>
