@@ -16,6 +16,10 @@
     background-color: rgb(1, 77, 255) !important;
 }
 
+.btnIcons {
+    width: 25px;
+}
+
 @media(max-width: 992px) {
     .navLogo {
         text-align: center;
